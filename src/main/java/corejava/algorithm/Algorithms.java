@@ -236,10 +236,10 @@ public class Algorithms {
 	}
 
 	public static int binarySearch(int[] a, int searchItem) {
+		Arrays.sort(a);
 		int mid = 0;
 		int startIndex = 0;
 		int endIndex = a.length - 1;
-
 		while (startIndex <= endIndex) {
 			mid = (startIndex + endIndex) / 2;
 			if (searchItem < a[mid]) {
@@ -288,7 +288,6 @@ public class Algorithms {
 
 			}
 		}
-
 	}
 
 	public static void main(String[] args) {
@@ -307,7 +306,9 @@ public class Algorithms {
 		// selectionSort(new int[] { 3, 2, 1 });
 //		printAllSubArray();
 //		topK(2);
-		printMissingNumber();
+//		printMissingNumber();
+
+		System.out.println(binarySearch(new int[] { 3, 2, 1 },3));
 	}
 
 
